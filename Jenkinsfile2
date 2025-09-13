@@ -10,7 +10,7 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        DOCKER_IMAGE = 'akshu20791/bms:latest'
+        DOCKER_IMAGE = 'bonthuaswini/bms:latest'
         EKS_CLUSTER_NAME = 'akshat-eks'
         AWS_REGION = 'us-east-1'
     }
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/akshu20791/Book-My-Show.git'
+                git branch: 'main', url: 'https://github.com/bonthuaswini/Book-My-Show.git'
                 sh 'ls -la'  // Verify files after checkout
             }
         }
